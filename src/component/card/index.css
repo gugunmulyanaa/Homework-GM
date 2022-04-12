@@ -1,0 +1,16 @@
+.cards {
+         display: grid;
+         grid-template-columns: 1fr minmax(100px, 50%);
+         padding: 0;
+         margin: 0;
+     }
+     
+     .cardImg {
+         height: 100vh;
+     
+     
+       }
+     
+       .cardCaps {
+         padding: 2rem;
+       }

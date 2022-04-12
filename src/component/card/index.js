@@ -1,14 +1,31 @@
-const Card =(props)=>{
+import React from 'react';
+
+
+
+const Cards = (props) => {
     return(
-        <div className="song-section">
-        <div className="song-content">
-          <img className="album" id="albumImage" src={props.album} alt="albumImage"
-          />
-          <p className="sTitle">{props.title}</p>
-          <p className="sArtist">{props.artist}</p>
-         <button className="btn select">Select</button>
-        </div>
-      </div>   
+        <div className ="cards">
+        <table>
+          <div className="cardImg">
+          <img src={props.image} alt="Album1" className="img-poster"/>
+          </div>
+          <div className="cardCaps">
+              <p>Track Title : {props.title}</p> 
+                <p id="artis"> Artis : {props.artis}</p> 
+                <button class="btn-select"> Select</button>
+          </div>
+
+        {/* <table>
+          <tr>
+            <td><img src={props.image} alt="Album1" className="img-poster"/></td>
+            <td className="box-desc">
+@@ -12,7 +23,7 @@ const Cards = (props) => {
+              <button class="btn-select"> Select</button>
+            </td>
+          </tr>
+        </table>
+        </table> */}
+      </div>
     )
 }
-export default Card;
+export default Cards
