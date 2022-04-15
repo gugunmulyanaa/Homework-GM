@@ -1,25 +1,18 @@
-import queryString from 'query-string';
-import Login from '../login/login.js';
-// import CreatePlaylist from '../createplaylist/createplaylist.js';
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-@@ -25,18 +24,6 @@ const Auth = () => {
+import React from 'react';
+
+
+const Auth = () => {
+    const client_id = 'f7ad929ce8994cd68a5853a184e1bcce';
+    const scope = 'playlist-modify-private';
+    const redirect_url = 'https://localhost:3000';
+
+    const handleLogin = () => {
+        window.location = `https://accounts.spotify.com/authorize?client_id=${this.client_id}&response_type=code&redirect_uri=${this.redirect_url}&scope=${this.scope}%2Fcallback`
+    }
     return (
-        <Login/>
+        <a href="/login" onClick={handleLogin()}>Login</a>
     )
-
-    // if(accessToken !== undefined){
-    //     return (
-    //         <CreatePlaylist/>
-    //     )
-    // }
-
-    // else {
-    //     return (
-    //         <Login/>
-    //     )
-    // }
 }
 
-export default Auth;
+
+export default Auth
