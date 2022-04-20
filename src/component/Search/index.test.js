@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
 import React from 'react'
-import { render, screen } from '@testing-library/react';
-import SearchForm from './index';
+import { fireEvent, render, screen } from '@testing-library/react';
+import ButtonCompo from './index';
 
-test('loads and displays greeting', async () => {
-    render(<SearchForm />)  
 
-    expect(screen.getByTestId('search_input')).toBeInTheDocument()
-  }) 
+test('Button are clicked', async () => {
+    render(<ButtonCompo />)  
+
+    const button = screen.getByTestId('button_test', {name: 'setSelected'});
+    fireEvent.click(button);
+  })
